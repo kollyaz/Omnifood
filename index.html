@@ -53,7 +53,8 @@
   <main>
 
     <!-- HERO SECTION -->
-    <section class="section-hero">
+  <div class="all-content">
+        <section class="section-hero">
       <div class="hero">
         <div class="hero-text-box">
           <h1 class="primary-heading">
@@ -555,14 +556,14 @@
               <div>
 
                 <label for="full-name">Full name:</label>
-                <input id="full-name" type="text" placeholder="Your name" required>
+                <input id="full-name" class="sign-up-input" type="text" placeholder="Your name" required>
                 
               </div>
 
               <div>
 
                 <label for="email">Email Address:</label>
-                <input id="email" type="email" placeholder="me@example.com" required>
+                <input id="email" class="sign-up-input email-input"  type="email" placeholder="me@example.com" required>
                 
               </div>
 
@@ -596,7 +597,7 @@
               </select>
               
             </div>
-              <button class="btn">
+              <button class="btn signup-btn">
                 Sign up now
               </button>
             </form>
@@ -607,8 +608,15 @@
         </div>
         </div>
     </section>
-  </main>
+   </main>
+  </div>
 
+   <div class="success-message hidden">
+        <h1>Thank You for Signing Up!</h1>
+        <p>You have successfully signed up. A confirmation email has been sent to <span class="email-success"></span></p>
+        <p>Please check your email and follow the instructions to complete your registration.</p>
+        <button class="btn success-button">Return to Homepage</button>
+    </div>
   <!-- FOOTER -->
   <footer class="footer">
     <div class="container grid grid-footer">
@@ -710,6 +718,9 @@
      
     </div>
   </footer>
+
+   
+ 
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   <script defer src="js/script.js"></script>

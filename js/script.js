@@ -155,3 +155,33 @@ checkFlexGap();
   }
 }
 */
+const all = document.querySelector(".all-content");
+const successBtn = document.querySelector(".success-button");
+const success = document.querySelector(".success-message");
+const signUpBtn = document.querySelector(".signup-btn");
+const signUpInput = document.querySelectorAll(".sign-up-input");
+const email = document.querySelector(".email-input");
+const emailSuccess = document.querySelector(".email-success");
+
+signUpBtn.addEventListener("click", function (e) {
+  e.preventDefault();
+  let allFilled = true;
+
+  signUpInput.forEach((input) => {
+    if (input.value.trim() === "") {
+      allFilled = false;
+    }
+  });
+
+  if (allFilled) {
+    all.classList.add("hidden");
+    success.classList.remove("hidden");
+    emailSuccess.textContent = email.value.trim();
+  }
+
+  // signUpInput.forEach((input)=>)
+});
+successBtn.addEventListener("click", function () {
+  all.classList.remove("hidden");
+  success.classList.add("hidden");
+});

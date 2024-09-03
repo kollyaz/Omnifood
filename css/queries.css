@@ -129,6 +129,7 @@
     pointer-events: none;
     visibility: hidden;
     transform: translateX(100%);
+    color: black;
   }
 
   .nav-open .main-nav {
